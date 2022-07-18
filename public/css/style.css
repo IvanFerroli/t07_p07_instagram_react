@@ -231,13 +231,12 @@ main {
 }
 
 .side-bar {
-  /* Fixar side-bar */
-  width: 293px;
+  top: 88px;
   margin-left: 28px;
+  width: 293px;
   background-color: #e5e5e5;
   position: sticky;
   position: -webkit-sticky;
-  top: 88px;
 }
 
 .account {
@@ -289,7 +288,6 @@ main {
 }
 
 .suggestions div :nth-child(2) {
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -332,6 +330,7 @@ footer {
   line-height: 13px;
   margin-bottom: 18px;
   gap: 2px;
+  max-width: 293px;
 }
 
 a {

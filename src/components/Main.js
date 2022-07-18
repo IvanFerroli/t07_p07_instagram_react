@@ -1,6 +1,7 @@
 import Stories from './Stories'
 import Posts from './Posts'
 import Aside from './Aside'
+import MobileMenu from './MobileMenu'
 
 export default function Main() {
     return(
@@ -9,9 +10,11 @@ export default function Main() {
                 <div className="feed">
                     <Stories />
                     <Posts />
-                    <Aside />
                 </div>
+                <Aside />
+                <MobileMenu />
             </main>
         </>
     )
 }
+
