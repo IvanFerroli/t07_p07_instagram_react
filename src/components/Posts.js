@@ -1,4 +1,20 @@
-import LikeButton from './LikeButton'
+import { Heart, HeartOutline, ChatbubbleOutline, BookmarkOutline, PaperPlaneOutline, EllipsisHorizontal} from 'react-ionicons'
+import React, { Fragment, useState } from "react";
+const LikeButton = () => {
+    const [like, setLike] = React.useState(false); 
+  
+    return (
+      <Fragment>
+        {like ? (
+          <Heart onClick={() => setLike(false)} name="heart" color={'#ED4956'} />
+        ) : (
+          <HeartOutline onClick={() => setLike(true)} name="heart" color={'#000000'} />
+        )}
+      </Fragment>
+    );
+  };
+
+/* import LikeButton from './LikeButton' */
 
 export default function Posts() {
     const posts = [
@@ -20,7 +36,7 @@ export default function Posts() {
                         </div>
                     </a>
                     <a href="#">
-                        <ion-icon className="ion" name="ellipsis-horizontal"></ion-icon>
+                        <EllipsisHorizontal name="ellipsis-horizontal"/>
                     </a>
                 </div>
                 <div className="post-middle">
@@ -33,15 +49,22 @@ export default function Posts() {
                         <div className="left-icons">
                             
                                 
-                                <ion-icon name="heart-outline" ></ion-icon>
+                                {/* <{like? "Heart" : "HeartOutline"} name="heart" color={like? "red" : "black"} onClick={() => {
+                                    if(like == true){
+                                        setLike = false;
+                                    }else{
+                                        setLike = true;
+                                    }
+                                }}/> */}
+                                < LikeButton /> 
                             
-                                <ion-icon name="chatbubble-outline" ></ion-icon>
+                                <ChatbubbleOutline name="chatbubble-outline" />
                            
-                                <ion-icon name="paper-plane-outline"></ion-icon>
+                                <PaperPlaneOutline name="paper-plane-outline"/>
                            
                         </div>
                         
-                            <ion-icon name="bookmark-outline"></ion-icon>
+                            <BookmarkOutline name="bookmark-outline"/>
                        
                     </div>
                     <div className="likes">
